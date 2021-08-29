@@ -8,36 +8,16 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: 123456
-
-
-  thymeleaf:
-    mode: LEGACYHTML5
-    # ȡ��ģ���ļ�����
-    cache: false
-
-  #    #�趨thymeleaf�ļ�·�� Ĭ��Ϊsrc/main/resources/templates
-  #    freemarker:
-  #        template-loader-path: classpath:/templates
-
-  #    #�趨��̬�ļ�·����js,css��
-  #    mvc:
-  #        static-path-pattern: /static/**
-
   servlet:
     multipart:
-      # ���õ����ļ���С
-      max-file-size: 200MB
-      # ���õ��������ļ����ܴ�С
       max-request-size: 200MB
+      max-file-size: 200MB
 
-#mybatis-plus:
 mybatis:
+  mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.example.demo.bean
-  #    mapper-locations: classpath*:/mapper/*Mapper.xml
-  mapper-locations: classpath*:/mapper/*.xml
-    #    configuration:
-  # �Ƿ����Զ��շ���������ӳ��:�����ݿ�������Java�����շ�����������ӳ��
-#        map-underscore-to-camel-case: true
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 #showSql
 logging:
