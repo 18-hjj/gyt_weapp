@@ -30,6 +30,6 @@ public class GytInformationController {
             System.out.println("SSSSSSSSSSSssss");
         }
 //        gytInformationMapper.insertInformation(hospital);
-        gytInformationMapper.updateInformation(hospital);
+        gytInformationMapper.insertInformation(hospital);
     }
 }
